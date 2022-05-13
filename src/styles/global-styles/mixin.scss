@@ -1,0 +1,41 @@
+@mixin flexNoOverflow() {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+@mixin componentSize() {
+  &.asv-large {
+    height: 44px;
+  }
+
+  &.asv-medium {
+    height: 34px;
+  }
+
+  &.asv-small {
+    height: 24px;
+  }
+}
+
+@mixin componentColor() {
+  &.asv-primary {
+    background-color: var(--asv-primary);
+    color: var(--asv-on-primary);
+  }
+
+  &.asv-secondary {
+    background-color: transparent;
+    border: 1px solid var(--asv-border-normal);
+
+    &:disabled {
+      color: var(--asv-text-disabled);
+    }
+  }
+}
+
+@function getRgb($color) {
+  @return red($color) + ", " + green($color) + ", " + blue($color);
+}

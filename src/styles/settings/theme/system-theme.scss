@@ -1,0 +1,8 @@
+.asv-system-theme {
+  @media (prefers-color-scheme: light) {
+    @include asvThemeLight;
+  }
+  @media (prefers-color-scheme: dark) {
+    @include asvThemeDark;
+  }
+}

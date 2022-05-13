@@ -1,0 +1,19 @@
+// All icons should inherit the size of the parent's font-size.
+.kong-icon {
+  display: flex !important;
+
+  > svg {
+    width: 1em;
+    height: 1em;
+  }
+}
+
+// Image are not selectable items, so making user select none as default behaviour for img tag's
+img {
+  user-select: none;
+}
+
+// To simplefy math
+* {
+  box-sizing: border-box;
+}
